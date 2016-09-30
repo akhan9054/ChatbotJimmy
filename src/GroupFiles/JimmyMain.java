@@ -9,7 +9,7 @@ public class JimmyMain {
 		static Scanner input;
 		static String user;
 		//list all chatbots available under this class
-		static Chatbot school;
+//		static chatbot school;
 				
 		public static void main(String[] args) {
 			//demonstrateStringMethods();
