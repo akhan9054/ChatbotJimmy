@@ -10,6 +10,9 @@ public class JimmyMain {
 		static String user;
 		//list all chatbots available under this class
 //		static chatbot school;
+		static Chatbot ivan;
+		static Chatbot joseph;
+		
 				
 		public static void main(String[] args) {
 			//demonstrateStringMethods();
@@ -20,15 +23,14 @@ public class JimmyMain {
 		}
 		
 		public static void promptName(){
-			print("Enter your name.");
+			print("Hello! I am a chatbot. What is your name?");
 			user = input.nextLine();
-			print("Wuss poppin b. For the rest of time, imma call you " + user + ". Call me Ya Boi.");
 		}
 
 		public static void promptForever() {
 			inMainLoop = true;
 			while (inMainLoop){
-				print("Hi, " + user + ". How are you?");
+				print("Hello, " + user + "! May i know what your hobby is?");
 				response = promptInput();
 				if(findKeyword(response, "good", 0) >= 0){
 					print("ayy nice but i dont care.");
