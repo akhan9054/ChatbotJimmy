@@ -1,6 +1,6 @@
 package GroupFiles;
 
-import chatbot.Chatbot;
+
 
 public class JimmyGames implements Chatbot {
 	private String PlatformResponse;
