@@ -1,0 +1,32 @@
+package GroupFiles;
+
+	public class JosephSports implements Chatbot{
+	private String response;
+	private boolean inSportLoop;
+	public String Sports;
+	public String[] Yes = {" What is your favorite sport?"+ "..."};
+	public String[] No = { " Why? " };
+
+	public void talk() {
+		inSportLoop = true;
+		while(inSportLoop) {
+			response = JimmyMain.promptInput();
+			
+			if(isTriggered(response)) {
+				inSportLoop = false;
+				JimmyMain.promptForever();
+			}
+		}
+	}
+	
+	public boolean isTriggered(String userInput) {
+		String[] triggers = {"baseball","basketball","soccer+","hockey","tennis","football"}; 
+		{	
+		if(JimmyMain.findKeyword(userInput, "Sport", 0) >=0 ){
+				return true;
+			}
+			return false;
+		}
+
+	}
+}
