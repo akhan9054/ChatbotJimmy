@@ -1,0 +1,27 @@
+package GroupFiles;
+
+	
+public class IvanBooks implements Chatbot{
+	private boolean inBookLoop;
+	public String Novel;
+
+	public String[] Recs = {"a","b","c","d" }; // if genre = fantasy = string 0 -> 3, etc
+
+	public void talk(){
+		
+	}
+	public boolean isTriggered(String userInput) {
+		if(JimmyMain.findKeyword(userInput, "Book", 0)>=0){
+			return true;
+		}
+		return false;
+	}
+
+	public static void specific() {
+	
+		if(JimmyMain.findKeyword(response, "good", 0) >= 0){
+		
+		}
+	}
+}
+	
