@@ -5,8 +5,8 @@ package GroupFiles;
 public class JimmyGames implements Chatbot {
 	private String PlatformResponse;
 	private boolean inPlatformLoop;
-	
-	private String[] calmResponse = {"Let's say something else", "You already said hello, did you forget?"};
+	private String platform;
+	private String[] calmResponse = {"Let's say something else", "Let's keep talking about games."};
 	private String[] angryResponse = {"Please stop repeating yourself","Do not say hello ever again"};
 	
 	private int PlatformCount;

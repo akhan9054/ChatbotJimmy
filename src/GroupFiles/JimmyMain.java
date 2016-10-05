@@ -10,8 +10,10 @@ public class JimmyMain {
 		static String user;
 		//list all chatbots available under this class
 //		static chatbot school;
-		static Chatbot ivan;
-		static Chatbot joseph;
+		static Chatbot books;
+		static Chatbot sports;
+		static Chatbot games;
+		static Chatbot calculator;
 		
 				
 		public static void main(String[] args) {
@@ -25,26 +27,42 @@ public class JimmyMain {
 		public static void promptName(){
 			print("Hello! I am a chatbot. What is your name?");
 			user = input.nextLine();
+
 		}
 
 		public static void promptForever() {
 			inMainLoop = true;
+			print("Hello " + user + "! May I know what your hobby is?");
 			while (inMainLoop){
-				print("Hello, " + user + "! May i know what your hobby is?");
 				response = promptInput();
-				if(findKeyword(response, "good", 0) >= 0){
-					print("ayy nice but i dont care.");
+				if(findKeyword(response, "no", 0) >= 0 || findKeyword(response, "nah", 0) >= 0){
+					print("I will not take " + response + " for an answer");
+					print(user + ", can you tell me what your hobby is?");
 				}
 				//response to liking school
-//				else if(response.indexOf("school") >= 0){
-//					print("School is wack. Tell me why you like it.");
-//					//exit while loop
-//					inMainLoop = false;
-//					//go to school's talk method
-//					school.talk();
-//				}
+				else if(findKeyword(response, "games", 0) >= 0){
+					print("Oh I love games as well. Tell me what your favorite game platform is.");
+					//exit while loop
+					inMainLoop = false;
+					//go to school's talk method
+					games.talk();
+				}
+				else if(findKeyword(response, "sports", 0) >= 0){
+					print("Oh I love sports as well. Tell me what your favorite sport is.");
+					//exit while loop
+					inMainLoop = false;
+					//go to school's talk method
+					sports.talk();
+				}
+				else if(findKeyword(response, "books", 0) >= 0){
+					print("Oh I love reading books as well. Tell me what your favorite genre is.");
+					//exit while loop
+					inMainLoop = false;
+					//go to school's talk method
+					books.talk();
+				}
 				else{
-					print("Whatchu sayin boi?");
+					print("Ok, tell me what it is then.");
 				}
 			}
 		}
@@ -124,6 +142,10 @@ public class JimmyMain {
 			user = "";
 			//initialize group chatbots below
 		//	school = new JimmySchool();
+			games = new JimmyGames();
+			calculator = new JimmyCalculator();
+			sports = new JosephSports();
+			books = new IvanBooks();
 		}
 
 		public static void demonstrateStringMethods(){
