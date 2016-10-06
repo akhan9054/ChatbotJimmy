@@ -2,7 +2,7 @@ package GroupFiles;
 
 import java.util.Scanner;
 
-public class JimmyMain {
+public class JimmyMain { //i like the shit code i see
 		
 		static String response;
 		static boolean inMainLoop;
