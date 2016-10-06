@@ -61,6 +61,13 @@ public class JimmyMain {
 					//go to school's talk method
 					books.talk();
 				}
+				else if(findKeyword(response, "math", 0) >= 0){
+					print("Oh I love math as well. Would you like me to calculate something?");
+					//exit while loop
+					inMainLoop = false;
+					//go to school's talk method
+					calculator.talk();
+				}
 				else{
 					print("Ok, tell me what it is then.");
 				}
@@ -144,8 +151,8 @@ public class JimmyMain {
 		//	school = new JimmySchool();
 			games = new JimmyGames();
 			calculator = new JimmyCalculator();
-			sports = new JosephSports();
-			books = new IvanBooks();
+	//		sports = new JosephSports();
+	//		books = new IvanBooks();
 		}
 
 		public static void demonstrateStringMethods(){
